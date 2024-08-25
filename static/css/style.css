@@ -1,8 +1,7 @@
 * {
     box-sizing: border-box;
-    font-family: poppins;
+    font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
-    box-sizing: border-box;
 }
 
 body {
@@ -18,15 +17,14 @@ ul {
     list-style: none;
 }
 
-/*==main================================*/
+/*== Main =================================*/
 #main {
     width: 100%;
-    flex-direction: column;
     height: 750px;
-    background-color: #080609;
+    background: #232323;
 }
 
-/*==nav-bar=============================*/
+/*== Nav Bar ==============================*/
 .navigation {
     position: sticky;
     top: 0;
@@ -35,24 +33,20 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto 40px;
+    margin: 0 auto 100px;
     padding: 10px 30px;
-    background: rgb(27 32 44 / 70%);
+    background: rgba(27, 32, 44, 0.7); /* Transparent background */
     backdrop-filter: blur(5px);
-    backface-visibility: hidden;
-    transform: translateZ(0px);
     border-radius: 0 0 8px 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure the navbar stays on top */
 }
 
 .logo {
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(../images/logo.png);
+    background-image: url('../images/logo.png');
     background-size: cover;
 }
 
@@ -61,60 +55,79 @@ ul {
     align-items: center;
 }
 
+.menu li {
+    position: relative;
+    display: inline-block;
+    margin: 0 18px;
+    padding: 10px 0;
+}
+
 .menu li a {
-    margin: 0 30px;
     color: #ACEA88;
     font-weight: 600;
-    transition: color ease 0.3s;
     font-size: 1.2rem;
+    transition: color 0.3s ease;
 }
 
 .menu li a:hover {
     color: #ffffff;
 }
 
-ul li {
-    position: relative;
-    display: inline-block;
-    margin: 0 13px;
-
-}
-
-ul li::before,
-ul li::after {
+.menu li::before,
+.menu li::after {
     content: "";
     height: 2px;
-    background-color: #ACEA88;;
+    background-color: #ACEA88;
     position: absolute;
-    transition: all 0.3s ease-in;
+    transition: width 0.2s ease;
 }
 
-ul li::before {
+.menu li::before {
     top: 0;
     left: 0;
     width: 0;
 }
 
-ul li::after {
-    right: 0;
+.menu li::after {
     bottom: 0;
+    right: 0;
     width: 0;
 }
 
-ul li:hover::before,
-ul li:hover::after {
+.menu li:hover::before,
+.menu li:hover::after {
     width: 100%;
 }
 
-ul li:hover::before {
-    transition: width 0.2s ease;
+#container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 0 200px;
 }
 
-ul li:hover::after {
-    transition: width 0.2s ease;
+#container h3, #container span {
+    color: #ACEA88;
+    font-size: 2.5rem;
 }
 
+#container > div > div {
+    display: flex;
+}
 
+#container button {
+    border: none;
+    padding: 10px 30px;
+    background-color: #57e0c7;
+    color: #000000;
+    font-size: 1rem;
+    font-weight: 550;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
 
-
-
+#container button:hover {
+    color: #262121;
+    background-color: #aaaaaa;
+    transform: scale(1.1);
+}
