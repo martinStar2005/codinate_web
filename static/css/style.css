@@ -21,24 +21,24 @@ ul {
 #main {
     width: 100%;
     height: 750px;
-    background: #232323;
+    background: linear-gradient(135deg, #0a2540, #000000);
 }
 
 /*== Nav Bar ==============================*/
 .navigation {
     position: sticky;
     top: 0;
-    width: 1200px;
-    height: 93px;
+    width: 80%;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto 100px;
     padding: 10px 30px;
-    background: rgba(27, 32, 44, 0.7); /* Transparent background */
-    backdrop-filter: blur(5px);
-    border-radius: 0 0 8px 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #00d2ff, #3a47d5);
+    backdrop-filter: blur(10px);
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     z-index: 1000; /* Ensure the navbar stays on top */
 }
 
@@ -63,7 +63,7 @@ ul {
 }
 
 .menu li a {
-    color: #ACEA88;
+    color: #ffffff;
     font-weight: 600;
     font-size: 1.2rem;
     transition: color 0.3s ease;
@@ -77,7 +77,7 @@ ul {
 .menu li::after {
     content: "";
     height: 2px;
-    background-color: #ACEA88;
+    background-color: #39ff14;
     position: absolute;
     transition: width 0.2s ease;
 }
@@ -101,12 +101,12 @@ ul {
 
 #container {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     margin: 0 auto 0 200px;
 }
 
 #container h3, #container span {
-    color: #ACEA88;
+    color: #ffffff;
     font-size: 2.5rem;
 }
 
@@ -117,17 +117,17 @@ ul {
 #container button {
     border: none;
     padding: 10px 30px;
-    background-color: #57e0c7;
-    color: #000000;
+    background-color: #00d2ff;
+    color: #ffffff;
     font-size: 1rem;
-    font-weight: 550;
+    font-weight: 700;
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease-in;
 }
 
 #container button:hover {
-    color: #262121;
-    background-color: #aaaaaa;
+    color: #ffffff;
+    background-color: #3a47d5;
     transform: scale(1.1);
 }
