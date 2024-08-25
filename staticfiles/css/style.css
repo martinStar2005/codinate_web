@@ -16,7 +16,7 @@ ul{
     min-height: 750px;
     background:
             linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Svart överlagring */
-            url('../images/backgroundmain.png') center/cover no-repeat;
+            url('images/backgroundmain.png') center/cover no-repeat;
 }
 /*==nav-bar=============================*/
 .navigation{
@@ -37,7 +37,7 @@ ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../images/logo.png);
+    background-image: url(images/logo.png);
     background-size: cover;
 }
 
