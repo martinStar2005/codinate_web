@@ -1,36 +1,51 @@
-*{
+* {
     box-sizing: border-box;
     font-family: poppins;
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
-a{
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
     text-decoration: none;
 }
-ul{
+
+ul {
     list-style: none;
 }
+
 /*==main================================*/
-#main{
+#main {
     width: 100%;
     flex-direction: column;
-    min-height: 750px;
-    background:
-            linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Svart överlagring */
-            url('../images/backgroundmain.png') center/cover no-repeat;
+    height: 750px;
+    background-color: #080609;
 }
+
 /*==nav-bar=============================*/
-.navigation{
+.navigation {
+    position: sticky;
+    top: 0;
+    width: 1200px;
+    height: 93px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    width: 90%;
-    margin: 0px auto;
-    padding: 30px 0px;
+    margin: 0 auto 40px;
+    padding: 10px 30px;
+    background: rgb(27 32 44 / 70%);
+    backdrop-filter: blur(5px);
+    backface-visibility: hidden;
+    transform: translateZ(0px);
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-.logo{
 
-
+.logo {
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -41,30 +56,65 @@ ul{
     background-size: cover;
 }
 
-.menu{
+.menu {
     display: flex;
     align-items: center;
 }
-.menu li a{
-    margin: 0px 30px;
-    color: #c9c9c9;
-    letter-spacing: 0.5px;
-    font-weight: 400;
-    transition: all ease 0.3s;
+
+.menu li a {
+    margin: 0 30px;
+    color: #ACEA88;
+    font-weight: 600;
+    transition: color ease 0.3s;
+    font-size: 1.2rem;
 }
-.nav-social{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.nav-social a{
-    color: #c9c9c9;
-    margin-left: 20px;
-    transition: all ease 0.3s;
-}e
-.nav-social a:first-child{
-    margin-left: 0px;
-}
-.menu li a:hover{
+
+.menu li a:hover {
     color: #ffffff;
 }
+
+ul li {
+    position: relative;
+    display: inline-block;
+    margin: 0 13px;
+
+}
+
+ul li::before,
+ul li::after {
+    content: "";
+    height: 2px;
+    background-color: #ACEA88;;
+    position: absolute;
+    transition: all 0.3s ease-in;
+}
+
+ul li::before {
+    top: 0;
+    left: 0;
+    width: 0;
+}
+
+ul li::after {
+    right: 0;
+    bottom: 0;
+    width: 0;
+}
+
+ul li:hover::before,
+ul li:hover::after {
+    width: 100%;
+}
+
+ul li:hover::before {
+    transition: width 0.2s ease;
+}
+
+ul li:hover::after {
+    transition: width 0.2s ease;
+}
+
+
+
+
+
