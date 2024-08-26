@@ -4,11 +4,11 @@ const textElement = document.querySelector("span");
 
 const type = (word) => {
     textElement.style.width = "0"
-    textElement.textContent = ""
+    textElement.innerText = ""
     let letterIndex = 0
 
     const interval = setInterval(() => {
-        textElement.textContent += word[letterIndex]
+        textElement.innerText += word[letterIndex]
         letterIndex ++
 
         if (letterIndex === word.length){
@@ -17,7 +17,7 @@ const type = (word) => {
                 textElement.style.animation = "fade-out 0.5s forwards"
                 setTimeout(() => {
                     textElement.style.animation = "none"
-                    textElement.textContent = ""
+                    textElement.innerText= ""
                     index = (index + 1) % words.length
                     type(words[index])
 
