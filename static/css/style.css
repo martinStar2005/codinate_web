@@ -1,10 +1,10 @@
 :root {
     --primary-background: #131a26;
     --primary-text: #E0E0E0;
-    --hover-line: #39FF14;
+    --hover-line: #92ddec;;
     --logo-color: #00d2ff;
     --page-text: #FFFFFF;
-    --button-background: #39FF14;
+    --button-background: #92ddec;
     --button-text: #131a26;
     --button-hover-background: #00d2ff;
     --button-hover-text: #FFFFFF;
@@ -171,6 +171,7 @@ span {
     color: var(--button-hover-text);
     background-color: var(--button-hover-background);
     transform: scale(1.1);
+    font-weight: 800;
 }
 
 @keyframes fade-out {
