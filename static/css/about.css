@@ -1,0 +1,114 @@
+:root {
+    --primary-background: #131a26;
+    --primary-text: #E0E0E0;
+    --hover-line: #39FF14;
+    --logo-color: #00d2ff;
+    --page-text: #FFFFFF;
+    --button-background: #39FF14;
+    --button-text: #131a26;
+    --button-hover-background: #00d2ff;
+    --button-hover-text: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    background: linear-gradient(135deg, #0a2540, #000000);
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/*== Main =================================*/
+#main {
+    width: 100%;
+    height: 730px;
+}
+
+/*== Nav Bar ==============================*/
+.navigation {
+    position: sticky;
+    top: 0;
+    width: 75%;
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto 200px;
+    padding: 10px 30px;
+    background: var(--primary-background);
+    backdrop-filter: blur(10px);
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), -15px 0 15px -10px rgba(19, 26, 38, 0.7), 15px 0 15px -10px rgba(19, 26, 38, 0.7);
+    z-index: 1000;
+}
+
+img {
+    width: 100px;
+    height: 70px;
+    border-radius: 30%;
+    background-size: cover;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu li {
+    position: relative;
+    display: inline-block;
+    padding: 10px 0;
+    margin: 10px 15px;
+}
+
+.menu li a {
+    color: var(--primary-text);
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+    color: var(--page-text);
+}
+
+.menu li::before,
+.menu li::after {
+    content: "";
+    height: 2px;
+    background-color: var(--hover-line);
+    position: absolute;
+    transition: width 0.2s ease;
+}
+
+.menu li::before {
+    top: 0;
+    left: 0;
+    width: 0;
+}
+
+.menu li::after {
+    bottom: 0;
+    right: 0;
+    width: 0;
+}
+
+.menu li:hover::before,
+.menu li:hover::after {
+    width: 100%;
+}
+
