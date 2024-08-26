@@ -21,10 +21,10 @@ const type = (word) => {
                     index = (index + 1) % words.length
                     type(words[index])
 
-                }, 500)
-            }, 3000)
+                }, 300)
+            }, 2000)
         }
 
-    }, 300)
+    }, 70)
 }
 type(words[index])

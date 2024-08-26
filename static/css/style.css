@@ -30,6 +30,13 @@ a {
 
 ul {
     list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top: 20px;
+    left: 100px;
 }
 
 /*== Main =================================*/
@@ -42,28 +49,35 @@ ul {
 .navigation {
     position: sticky;
     top: 0;
-    width: 75%;
+    width: 85%;
     height: 85px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    margin: 0 auto 200px;
+    margin: 0 auto 0;
     padding: 10px 30px;
-    background: var(--primary-background);
-    backdrop-filter: blur(10px);
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), -15px 0 15px -10px rgba(19, 26, 38, 0.7), 15px 0 15px -10px rgba(19, 26, 38, 0.7);
-    z-index: 1000;
+    background: none;
 }
 
 img {
-    width: 100px;
-    height: 70px;
+    width: 170px;
+    height: 130px;
     border-radius: 30%;
     background-size: cover;
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    left: 40px;
 }
 
 .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.logo-detail {
     display: flex;
     align-items: center;
 }
@@ -72,7 +86,8 @@ img {
     position: relative;
     display: inline-block;
     padding: 10px 0;
-    margin: 10px 15px;
+    margin: 10px 30px;
+    transition: all 0.3s ease
 }
 
 .menu li a {
@@ -83,7 +98,7 @@ img {
 }
 
 .menu li a:hover {
-    color: var(--page-text);
+    color: #525252;
 }
 
 .menu li::before,
@@ -105,11 +120,6 @@ img {
     bottom: 0;
     right: 0;
     width: 0;
-}
-
-.menu li:hover::before,
-.menu li:hover::after {
-    width: 100%;
 }
 
 #container {
@@ -141,6 +151,7 @@ img {
 
 }
 
+
 span {
     display: inline-block;
     font-size: 2.7rem;
@@ -155,10 +166,10 @@ span {
 }
 
 #container button {
-    border: none;
+    border: 2px solid #FFFFFF;
     padding: 10px 30px;
-    background-color: var(--button-background);
-    color: var(--button-text);
+    background: none;
+    color: #FFFFFF;
     font-size: 1rem;
     font-weight: 700;
     border-radius: 10px;
@@ -170,11 +181,21 @@ span {
 #container button:hover {
     color: var(--button-hover-text);
     background-color: var(--button-hover-background);
-    transform: scale(1.1);
     font-weight: 800;
 }
 
 @keyframes fade-out {
-    from { opacity: 1; }
-    to { opacity: 0; }
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.khat {
+    width: 82%;
+    border-bottom: 1px solid #adacac;
+    margin: 3px auto 190px;
+
 }
