@@ -47,15 +47,24 @@
             </ul>
 
             <i class="fa-solid fa-language"
-               style="color: #ffffff; font-size: 2rem; position: relative; top: 25px; cursor: pointer;"></i>
+               style="color: #ffffff; font-size: 2.3rem;display: block; position: relative; top: 25px; cursor: pointer; margin-right: 7.5%;"></i>
             <!--**contact-btn****-->
         </nav>
+
 
         <div class="logo-detail">
             <a class="logo" href="#">
                 <img src="{% static 'images/logo.png' %}" alt="CODINATE Logo">
             </a>
             <div class="line"></div>
+        </div>
+        <div class="choices">
+            <div>
+                <button class="cross">X</button>
+            </div>
+            <span>English</span>
+            <span>Swedish</span>
+            <span>Persian</span>
         </div>
         <!--end-nav-->
     </header>
@@ -66,7 +75,7 @@
                     <h1>CODINATE Helps You to</h1>
                     <div class="second-line">
                         <div>
-                            <span></span>
+                            <span id="text-change"></span>
                         </div>
                         <h2>Your Business</h2>
                     </div>

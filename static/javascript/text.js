@@ -1,6 +1,23 @@
 const words = ["CREATE", "IMPROVE", "DEVELOP", "ELEVATE"];
 let index = 0;
-const textElement = document.querySelector("span");
+const textElement = document.getElementById("text-change");
+const languageButton = document.querySelector(".choices")
+const languageButtonI = document.querySelector("i")
+
+
+const languageButtonHandler = () => {
+    languageButton.style.animation = "languageAnimation 0.4s forwards"
+    languageButtonI.style.opacity = "0"
+    languageButton.style.display = "flex"
+}
+
+const languageListRemoveHandler = () => {
+    languageButton.style.animation = "languageAnimationRemove 0.4s forwards"
+    languageButtonI.style.opacity = "1"
+}
+languageButtonI.addEventListener("click", languageButtonHandler)
+languageButton.addEventListener("click", languageListRemoveHandler)
+
 
 const type = (word) => {
     textElement.style.width = "0"
