@@ -1,3 +1,15 @@
+:root {
+    --primary-background: #131a26;
+    --primary-text: #E0E0E0;
+    --hover-line: #92ddec;;
+    --logo-color: #00d2ff;
+    --page-text: #FFFFFF;
+    --button-background: #92ddec;
+    --button-text: #131a26;
+    --button-hover-background: #00d2ff;
+    --button-hover-text: #FFFFFF;
+}
+
 * {
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
@@ -5,8 +17,11 @@
 }
 
 body {
-    margin: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
     padding: 0;
+    background: linear-gradient(135deg, #0a2540, #000000);
 }
 
 a {
@@ -15,42 +30,51 @@ a {
 
 ul {
     list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top: 30px;
+    left: 100px;
+    margin-right: 100px;
 }
 
 /*== Main =================================*/
 #main {
     width: 100%;
-    height: 750px;
-    background: linear-gradient(135deg, #0a2540, #000000);
+    height: 730px;
 }
 
 /*== Nav Bar ==============================*/
 .navigation {
-    position: sticky;
-    top: 0;
-    width: 80%;
-    height: 80px;
+    width: 85%;
+    height: 85px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    margin: 0 auto 100px;
+    margin: 0 auto 5px;
     padding: 10px 30px;
-    background: linear-gradient(135deg, #00d2ff, #3a47d5);
-    backdrop-filter: blur(10px);
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    z-index: 1000; /* Ensure the navbar stays on top */
+    background: none;
 }
 
-.logo {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background-image: url('../images/logo.png');
-    background-size: cover;
+.logo-detail img {
+    width: 170px;
+    height: 130px;
+    border-radius: 30%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
 .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.logo-detail {
     display: flex;
     align-items: center;
 }
@@ -58,26 +82,27 @@ ul {
 .menu li {
     position: relative;
     display: inline-block;
-    margin: 0 18px;
     padding: 10px 0;
+    margin: 10px 30px;
+    transition: all 0.3s ease
 }
 
 .menu li a {
-    color: #ffffff;
+    color: var(--primary-text);
     font-weight: 600;
     font-size: 1.2rem;
     transition: color 0.3s ease;
 }
 
 .menu li a:hover {
-    color: #ffffff;
+    color: #525252;
 }
 
 .menu li::before,
 .menu li::after {
     content: "";
     height: 2px;
-    background-color: #39ff14;
+    background-color: var(--hover-line);
     position: absolute;
     transition: width 0.2s ease;
 }
@@ -94,40 +119,88 @@ ul {
     width: 0;
 }
 
-.menu li:hover::before,
-.menu li:hover::after {
-    width: 100%;
-}
-
 #container {
+    width: 75%;
     display: flex;
     justify-content: space-between;
-    margin: 0 auto 0 200px;
+    margin: 0 auto;
+}
+
+#container > div {
+
 }
 
 #container h3, #container span {
-    color: #ffffff;
+    color: var(--page-text);
     font-size: 2.5rem;
 }
 
 #container > div > div {
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container > div > div > div {
+    width: 175px;
+    margin-left: 30px;
+    margin-top: 40px;
+
+}
+
+
+span {
+    display: inline-block;
+    font-size: 2.7rem;
+    font-weight: 1000;
+}
+
+#container h3 {
+    margin-left: 30px;
+    margin-bottom: 0;
+    font-weight: 500;
+    color: #bdb9b9;
 }
 
 #container button {
-    border: none;
+    border: 2px solid #FFFFFF;
     padding: 10px 30px;
-    background-color: #00d2ff;
-    color: #ffffff;
+    background: none;
+    color: #FFFFFF;
     font-size: 1rem;
     font-weight: 700;
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease-in;
+    margin: 50px 0 0 30px;
 }
 
 #container button:hover {
-    color: #ffffff;
-    background-color: #3a47d5;
-    transform: scale(1.1);
+    color: var(--button-hover-text);
+    background-color: var(--button-hover-background);
+    font-weight: 800;
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.khat {
+    width: 82%;
+    border-bottom: 1px solid #adacac;
+    margin: 3px auto 190px;
+
+}
+
+#container img {
+    width: 400px;
+    height: 400px;
+    filter: drop-shadow(10px 10px 10px #000000);
+    border-radius: 30%;
+
 }
