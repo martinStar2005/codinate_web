@@ -94,7 +94,7 @@ ul {
 }
 
 .menu li a:hover {
-    color: #525252;
+    color: var(--logo-color);
 }
 
 #container {
@@ -195,7 +195,7 @@ ul {
     }
 }
 
-.khat {
+.line {
     width: 82%;
     border-bottom: 1px solid #adacac;
     margin: 3px auto 150px;

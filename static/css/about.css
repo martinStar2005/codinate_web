@@ -1,12 +1,12 @@
 :root {
     --primary-background: #131a26;
     --primary-text: #E0E0E0;
-    --hover-line: #39FF14;
+    --hover-line: #92ddec;;
     --logo-color: #00d2ff;
     --page-text: #FFFFFF;
-    --button-background: #39FF14;
+    --button-background: #92ddec;
     --button-text: #131a26;
-    --button-hover-background: #006070;
+    --button-hover-background: #00d2ff;
     --button-hover-text: #FFFFFF;
 }
 
@@ -18,7 +18,6 @@
 
 body {
     width: 100%;
-    height: 100%;
     margin: 0 auto;
     padding: 0;
     background: linear-gradient(135deg, #0a2540, #000000);
@@ -30,6 +29,14 @@ a {
 
 ul {
     list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top: 30px;
+    left: 100px;
+    margin-right: 100px;
 }
 
 /*== Main =================================*/
@@ -40,30 +47,33 @@ ul {
 
 /*== Nav Bar ==============================*/
 .navigation {
-    position: sticky;
-    top: 0;
-    width: 75%;
+    width: 85%;
     height: 85px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    margin: 0 auto 200px;
+    margin: 0 auto 5px;
     padding: 10px 30px;
-    background: var(--primary-background);
-    backdrop-filter: blur(10px);
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), -15px 0 15px -10px rgba(19, 26, 38, 0.7), 15px 0 15px -10px rgba(19, 26, 38, 0.7);
-    z-index: 1000;
+    background: none;
 }
 
-img {
-    width: 100px;
-    height: 70px;
+.logo-detail img {
+    width: 170px;
+    height: 130px;
     border-radius: 30%;
-    background-size: cover;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
 .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.logo-detail {
     display: flex;
     align-items: center;
 }
@@ -72,7 +82,8 @@ img {
     position: relative;
     display: inline-block;
     padding: 10px 0;
-    margin: 10px 15px;
+    margin: 10px 30px;
+    transition: all 0.3s ease
 }
 
 .menu li a {
@@ -83,32 +94,12 @@ img {
 }
 
 .menu li a:hover {
-    color: var(--page-text);
+    color: var(--logo-color);
 }
 
-.menu li::before,
-.menu li::after {
-    content: "";
-    height: 2px;
-    background-color: var(--hover-line);
-    position: absolute;
-    transition: width 0.2s ease;
-}
+.line {
+    width: 82%;
+    border-bottom: 1px solid #adacac;
+    margin: 3px auto 150px;
 
-.menu li::before {
-    top: 0;
-    left: 0;
-    width: 0;
 }
-
-.menu li::after {
-    bottom: 0;
-    right: 0;
-    width: 0;
-}
-
-.menu li:hover::before,
-.menu li:hover::after {
-    width: 100%;
-}
-
