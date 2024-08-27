@@ -8,8 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--==title============================-->
     <title>Codinate</title>
+    <!--==Meta Description=================-->
+    <meta name="description"
+          content="CODINATE helps you elevate your business through innovative solutions and services.">
+
     <!--==CSS==============================-->
-    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
     <!--==fav-icon=========================-->
     <link rel="shortcut icon" href="{% static 'images/logo.png' %}">
@@ -36,45 +40,75 @@
 
             <!--**menu***********-->
             <ul class="menu">
-                <li><a href="{% url 'about' %}">About US</a></li>
+                <li><a href="{% url 'about' %}">About Us</a></li>
                 <li><a href="#">Work Samples</a></li>
                 <li><a href="#">Services</a></li>
-                <li><a href="#">Contact US</a></li>
+                <li><a href="#">Contact Us</a></li>
             </ul>
 
-            <i class="fa-solid fa-language" style="color: #ffffff; font-size: 2rem; position: relative;
-    top: 25px; cursor: pointer;"></i>
+            <i class="fa-solid fa-language"
+               style="color: #ffffff; font-size: 2rem; position: relative; top: 25px; cursor: pointer;"></i>
             <!--**contact-btn****-->
         </nav>
 
         <div class="logo-detail">
-            <a class="logo">
-                <img src="{% static "images/logo.png" %}" alt="">
+            <a class="logo" href="#">
+                <img src="{% static 'images/logo.png' %}" alt="CODINATE Logo">
             </a>
             <div class="khat"></div>
         </div>
         <!--end-nav-->
     </header>
-    <main id="container">
-        <div>
-            <h3>CODINATE Helps You to</h3>
-            <div>
-                <div>
-                    <span></span>
+    <main>
+        <div id="container">
+            <div class="first-element">
+                <div class="detail">
+                    <h1>CODINATE Helps You to</h1>
+                    <div class="second-line">
+                        <div>
+                            <span></span>
+                        </div>
+                        <h2>Your Business</h2>
+                    </div>
+                    <div class="buttons">
+                        <a class="first-button" href="#">
+                            <button>Contact Us</button>
+                        </a>
+                        <a class="second-button" href="#">
+                            <button>Social Media</button>
+                        </a>
+                    </div>
                 </div>
-                <h3>
-                    Your Business
-                </h3>
-
+                <img src="{% static 'images/programming2.png' %}" alt="Programming illustration">
             </div>
-            <a href="#">
-                <button>Contact Us</button>
-            </a>
-        </div>
-        <img src="{% static 'images/programming2.png' %}" alt="">
-    </main>
 
+            <div class="second-element">
+                <img src="{% static 'images/programming.png' %}" alt="Programming example">
+                <div class="detail">
+                    <h2>Experience Progress with Us</h2>
+                    <div class="second-line">
+                        <div>
+                            <span>Create</span>
+                        </div>
+                        <h2>Your Business</h2>
+                    </div>
+                    <div class="buttons">
+                        <a href="#">
+                            <button>Services</button>
+                        </a>
+                        <a href="#">
+                            <button>Instagram</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <h2 style="font-size: 2rem;">Footer Place</h2>
+    </footer>
 </section>
+
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="{% static 'javascript/text.js' %}"></script>
 </body>

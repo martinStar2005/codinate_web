@@ -18,7 +18,6 @@
 
 body {
     width: 100%;
-    height: 100%;
     margin: 0 auto;
     padding: 0;
     background: linear-gradient(135deg, #0a2540, #000000);
@@ -98,71 +97,77 @@ ul {
     color: #525252;
 }
 
-.menu li::before,
-.menu li::after {
-    content: "";
-    height: 2px;
-    background-color: var(--hover-line);
-    position: absolute;
-    transition: width 0.2s ease;
-}
-
-.menu li::before {
-    top: 0;
-    left: 0;
-    width: 0;
-}
-
-.menu li::after {
-    bottom: 0;
-    right: 0;
-    width: 0;
-}
-
 #container {
-    width: 75%;
+    width: 85%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     margin: 0 auto;
 }
 
-#container > div {
+.first-element {
+    display: flex;
+    margin: 0 30px;
+    height: 100vh;
+}
+
+.first-element > div {
+    margin-right: 70px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 
-#container h3, #container span {
-    color: var(--page-text);
-    font-size: 2.5rem;
-}
-
-#container > div > div {
+.first-element .second-line {
     display: flex;
     align-items: center;
-    justify-content: center;
-}
-
-#container > div > div > div {
-    width: 175px;
-    margin-left: 30px;
-    margin-top: 40px;
-
 }
 
 
-span {
+.first-element span {
     display: inline-block;
-    font-size: 2.7rem;
-    font-weight: 1000;
+    font-size: 2.3rem;
+    font-weight: 900;
+    position: relative;
+    top: 3px;
+    left: 20px;
+    margin-right: 80px;
+    color: var(--page-text);
 }
 
-#container h3 {
-    margin-left: 30px;
+.first-element h1 {
     margin-bottom: 0;
     font-weight: 500;
     color: #bdb9b9;
+    font-size: 2rem;
+    position: relative;
+    left: -20px;
+
 }
 
-#container button {
+.first-element .detail > h2 {
+    margin-left: -25px;
+    position: relative;
+    top: 30px;
+}
+
+.first-element .detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+    top: 10px;
+}
+
+.first-element .second-line h2 {
+    color: #bdb9b9;
+    margin-left: 125px;
+    font-size: 2rem;
+}
+
+#container .first-element button {
     border: 2px solid #FFFFFF;
     padding: 10px 30px;
     background: none;
@@ -175,7 +180,7 @@ span {
     margin: 50px 0 0 30px;
 }
 
-#container button:hover {
+#container .first-element button:hover {
     color: var(--button-hover-text);
     background-color: var(--button-hover-background);
     font-weight: 800;
@@ -193,14 +198,133 @@ span {
 .khat {
     width: 82%;
     border-bottom: 1px solid #adacac;
-    margin: 3px auto 190px;
+    margin: 3px auto 150px;
 
 }
 
-#container img {
+#container .first-element img {
     width: 400px;
     height: 400px;
     filter: drop-shadow(10px 10px 10px #000000);
     border-radius: 30%;
+    position: absolute;
+    right: 100px;
 
+}
+
+#container .second-element img {
+    width: 450px;
+    height: 450px;
+    filter: drop-shadow(10px 10px 10px #092037);
+    border-radius: 30%;
+
+}
+
+.first-element .buttons {
+    position: relative;
+    left: 0;
+    bottom: 200px;
+}
+
+.second-element {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 20px;
+    height: 100vh;
+
+}
+
+
+.second-element > div {
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.second-element .second-line {
+    display: flex;
+    align-items: center;
+}
+
+
+.second-element span {
+    display: inline-block;
+    font-size: 2.3rem;
+    font-weight: 900;
+    position: relative;
+    top: 18px;
+    right: 18px;
+    color: var(--page-text);
+}
+
+.second-element h2 {
+    margin-bottom: 0;
+    font-weight: 500;
+    color: #bdb9b9;
+    font-size: 2rem;
+}
+
+.second-element .detail > h2 {
+    margin-left: -35px;
+    position: relative;
+    top: 22px;
+}
+
+.second-element .detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+    top: 10px;
+}
+
+.second-element .second-line h2 {
+    position: relative;
+    bottom: 0;
+    margin-right: 90px;
+}
+
+#container .second-element button {
+    border: 2px solid #FFFFFF;
+    padding: 10px 30px;
+    background: none;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    margin: 50px 0 0 30px;
+}
+
+#container .second-element button:hover {
+    color: var(--button-hover-text);
+    background-color: var(--button-hover-background);
+    font-weight: 800;
+}
+
+.first-element .buttons {
+    position: absolute;
+    left: 0;
+    bottom: 200px;
+}
+
+.second-element .buttons {
+    position: relative;
+    bottom: -90px;
+}
+footer {
+    width: 100%;
+    height: 50vh;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span {
+    margin-bottom: 10px;
 }
