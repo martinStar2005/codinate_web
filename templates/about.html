@@ -1,14 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 {% load static %}
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static "css/about.css" %}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--==title============================-->
+    <title>Codinate</title>
+    <!--==Meta Description=================-->
+    <meta name="description"
+          content="CODINATE helps you elevate your business through innovative solutions and services.">
 
+    <!--==CSS==============================-->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!--==fav-icon=========================-->
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}">
+    <!--==poppins==========================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
             href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
             rel="stylesheet">
@@ -16,11 +27,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </head>
+
 <body>
 
 <!--==main===========================-->
 <section id="main">
 
+    <!--==Navigation==========================-->
     <header id="header">
         <nav class="navigation">
             <!--**logo***********-->
@@ -34,9 +47,10 @@
             </ul>
 
             <i class="fa-solid fa-language"
-               style="color: #ffffff; font-size: 2rem; position: relative; top: 25px; cursor: pointer;"></i>
+               style="color: #ffffff; font-size: 2.3rem;display: block; position: relative; top: 25px; cursor: pointer; margin-right: 7.5%;"></i>
             <!--**contact-btn****-->
         </nav>
+
 
         <div class="logo-detail">
             <a class="logo" href="#">
@@ -44,9 +58,18 @@
             </a>
             <div class="line"></div>
         </div>
+        <div class="choices">
+            <div>
+                <button class="cross">X</button>
+            </div>
+            <span>English</span>
+            <span>Swedish</span>
+            <span>Persian</span>
+        </div>
         <!--end-nav-->
     </header>
 </section>
-<script src="{% static 'javascript/about.js' %}"></script>
+
 </body>
+<script src="{% static 'javascript/text.js' %}"></script>
 </html>
