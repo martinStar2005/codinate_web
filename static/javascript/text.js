@@ -25,6 +25,6 @@ const type = (word) => {
             }, 3000)
         }
 
-    }, 300)
+    }, 70)
 }
 type(words[index])
