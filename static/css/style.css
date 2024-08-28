@@ -207,7 +207,7 @@ ul {
 
 #container img {
     width: 400px;
-    height: 400px;
+    height: 500px;
     filter: drop-shadow(10px 10px 10px #000000);
     border-radius: 30%;
     margin: 0 auto;
