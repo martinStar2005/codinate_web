@@ -23,23 +23,29 @@
 <!--==main===========================-->
 <section id="main">
 
-    <!--==Navigation==========================-->
     <header id="header">
         <nav class="navigation">
             <!--**logo***********-->
-            <a class="logo">
-                <img src="{% static "images/logo.png" %}" alt="">
-            </a>
+
             <!--**menu***********-->
             <ul class="menu">
-                <li><a href="#">About US</a></li>
+                <li><a href="{% url 'about' %}">About Us</a></li>
                 <li><a href="#">Work Samples</a></li>
                 <li><a href="#">Services</a></li>
-                <li><a href="#">Contact US</a></li>
+                <li><a href="#">Contact Us</a></li>
             </ul>
+
+            <i class="fa-solid fa-language"
+               style="color: #ffffff; font-size: 2rem; position: relative; top: 25px; cursor: pointer;"></i>
             <!--**contact-btn****-->
         </nav>
 
+        <div class="logo-detail">
+            <a class="logo" href="#">
+                <img src="{% static 'images/logo.png' %}" alt="CODINATE Logo">
+            </a>
+            <div class="line"></div>
+        </div>
         <!--end-nav-->
     </header>
 </section>
