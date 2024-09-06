@@ -83,14 +83,14 @@ ul {
     display: inline-block;
     padding: 10px 0;
     margin: 10px 30px;
-    transition: all 0.3s ease
+    transition: all 0.4s ease
 }
 
 .menu li a {
     color: var(--primary-text);
     font-weight: 600;
     font-size: 1.3rem;
-    transition: color 0.3s ease;
+    transition: color 0.4s ease;
 }
 
 .menu li a:hover {
@@ -207,7 +207,7 @@ ul {
 
 #container img {
     width: 400px;
-    height: 500px;
+    height: 400px;
     filter: drop-shadow(10px 10px 10px #000000);
     border-radius: 30%;
     margin: 0 auto;

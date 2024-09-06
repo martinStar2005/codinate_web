@@ -1,8 +1,22 @@
+
 const words = ["CREATE", "IMPROVE", "DEVELOP", "ELEVATE"];
 let index = 0;
 const textElement = document.getElementById("text-change");
 const languageButton = document.querySelector(".choices")
-const languageButtonI = document.querySelector("i")
+const navigation = document.querySelector("nav")
+const languageButtonI = navigation.querySelector("i")
+const footer = document.querySelector("footer")
+const iconChat = footer.querySelector("i")
+
+iconChat.addEventListener("mouseover", function () {
+    iconChat.style.color = "white"
+    iconChat.style.fontSize = "3.5rem"
+})
+iconChat.addEventListener("mouseout", function () {
+    iconChat.style.color = "#00d2ff"
+    iconChat.style.fontSize = "3rem"
+})
+
 
 
 const languageButtonHandler = () => {
@@ -17,6 +31,7 @@ const languageListRemoveHandler = () => {
 }
 languageButtonI.addEventListener("click", languageButtonHandler)
 languageButton.addEventListener("click", languageListRemoveHandler)
+
 
 
 const type = (word) => {
