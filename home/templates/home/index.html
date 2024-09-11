@@ -119,10 +119,40 @@
         <h2 style="font-size: 2rem;">Footer Place</h2>
         <i class="fa-regular fa-comment-dots" style="font-size: 3rem; color: #00d2ff; position: fixed; right: 15px;
      bottom: 15px; cursor: pointer; transition: all 0.5s ease"></i>
+        <div id="chat-box">
+            <div id="owner-information">
+                <p id="cross">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </p>
+                <div>
+                    <div>
+                        <p>support group</p>
+                    </div>
+
+                    <img src="{% static 'images/programming2.png' %}" alt="owner-image">
+
+                </div>
+            </div>
+            <div id="chats">
+                <p id="owner-chat">Hi, How can I help you?</p>
+                <p id="users-chat"> Hi I want to ask a question</p>
+                <p id="owner-chat">Hi, How can I help you?</p>
+                <p id="users-chat"> Hi I want to ask a question</p>
+            </div>
+            <div id="write-chat">
+                <input type="text" placeholder="Type your text here">
+                <button id="send">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+
+
+            </div>
+        </div>
     </footer>
 </section>
 
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="{% static 'javascript/text.js' %}"></script>
 </body>
 

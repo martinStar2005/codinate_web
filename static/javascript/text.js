@@ -7,6 +7,8 @@ const navigation = document.querySelector("nav")
 const languageButtonI = navigation.querySelector("i")
 const footer = document.querySelector("footer")
 const iconChat = footer.querySelector("i")
+const cross = document.getElementById("cross")
+const chatBox = document.getElementById("chat-box")
 
 iconChat.addEventListener("mouseover", function () {
     iconChat.style.color = "white"
@@ -17,6 +19,15 @@ iconChat.addEventListener("mouseout", function () {
     iconChat.style.fontSize = "3rem"
 })
 
+iconChat.addEventListener("click", function () {
+    iconChat.style.animation = "hideChatIcon 1s forwards"
+    chatBox.style.animation = "showChatBox 1s forwards 0.5s"
+})
+
+cross.addEventListener("click", function () {
+    chatBox.style.animation = "hideChatBox 1s forwards"
+    iconChat.style.animation = "showChatIcon 1s forwards"
+})
 
 
 const languageButtonHandler = () => {
