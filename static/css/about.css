@@ -52,7 +52,7 @@ ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 0 auto 5px;
+    margin: 0 7.5% 5px 7.5%;
     padding: 10px 30px;
     background: none;
 }
@@ -89,7 +89,7 @@ ul {
 .menu li a {
     color: var(--primary-text);
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     transition: color 0.3s ease;
 }
 
@@ -101,5 +101,80 @@ ul {
     width: 82%;
     border-bottom: 1px solid #adacac;
     margin: 3px auto 150px;
+
+}
+
+.choices span {
+    margin-bottom: 10px;
+}
+
+.choices {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    width: 50px;
+    height: 120px;
+    position: absolute;
+    top: 53px;
+    right: 213px;
+    z-index: 3;
+    animation: languageAnimation 0.4s ease-in-out;
+}
+
+@keyframes languageAnimation {
+    0% {
+        opacity: 0;
+        height: 0;
+    }
+    50% {
+        opacity: 0.5;
+        height: 60px;
+    }
+    100% {
+        opacity: 1;
+        height: 120px;
+    }
+}
+
+@keyframes languageAnimationRemove {
+    0% {
+        opacity: 1;
+        height: 120px;
+    }
+    50% {
+        opacity: 0.5;
+        height: 60px;
+    }
+    100% {
+        opacity: 0;
+        height: 0;
+        display: none;
+
+    }
+}
+
+.choices span {
+    color: black;
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.cross {
+    font-size: 0.7rem;
+    color: white;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.choices > div {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+
 
 }
