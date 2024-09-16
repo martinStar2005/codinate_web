@@ -15,12 +15,15 @@
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
+#header{
+    background: #0A2540FF;
+    height: 130px;
+}
 
 body {
     width: 100%;
     margin: 0 auto;
     padding: 0;
-    background: linear-gradient(135deg, #0a2540, #000000);
 }
 
 a {
@@ -42,7 +45,29 @@ ul {
 /*== Main =================================*/
 #main {
     width: 100%;
-    height: 730px;
+    height: 600px;
+    background: #0A2540FF;
+}
+.first-element {
+    background: #0A2540FF;
+    height: 400px;
+}
+
+.second-element {
+    background: #1b1b1b;
+    height: 100vh;
+    width: 100%;
+}
+.third-element {
+    background: #0A2540FF;
+    height: 100vh;
+    width: 100%;
+}
+
+.fourth-element {
+    background: #1b1b1b;
+    height: 100vh;
+    width: 100%;
 }
 
 /*== Nav Bar ==============================*/
@@ -52,7 +77,7 @@ ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 0 7.5% 5px 7.5%;
+    margin: 0 7.5%;
     padding: 10px 30px;
     background: none;
 }
@@ -98,79 +123,58 @@ ul {
 }
 
 #container {
-    width: 85%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    margin: 0;
 }
 
 #container > div {
     display: flex;
-    margin: 0 30px;
-    width: 95%;
-    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    height: 500px;
+
 }
 
 #container .first-element > .detail,
-#container .second-element > .detail {
+#container .second-element > .detail,
+#container .third-element > .detail,
+#container .fourth-element > .detail{
     width: 600px;
     display: flex;
     flex-direction: column;
-    padding: 10px 18px;
-    margin: 0 50px 50px 0;
     align-items: center;
-    position: relative;
+    color: white;
 }
 
-
-.detail h1,
-.detail h2,
-.detail span {
-    color: var(--page-text);
-
+#container .first-element >.detail #text,
+#container .second-element >.detail #text,
+#container .third-element >.detail #text,
+#container .fourth-element >.detail #text{
+    font-size: 1.3rem;
+    line-height: 2.6rem;
+    font-family: 'Consolas', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    margin-bottom: 65px;
 }
 
-.detail h1, .detail h2 {
-    font-weight: 400;
-    font-size: 2rem;
-}
-
-.first-element .detail h2 {
-    margin-left: 180px;
-}
-
-.first-element > .detail span {
+#container .first-element >.detail #text span,
+#container .second-element >.detail #text span,
+#container .third-element >.detail #text span,
+#container .fourth-element >.detail #text span{
     font-weight: 900;
-    position: absolute;
-    left: 103px;
-    top: 138px;
-    font-size: 2.1rem;
+    font-size: 2.2rem;
 }
 
-.second-element .detail h2 {
-    margin-left: 150px;
-}
 
-.second-element > .detail span {
-    font-weight: 900;
-    position: absolute;
-    left: 103px;
-    top: 138px;
-    font-size: 2.1rem;
-}
 
-.buttons {
-    display: flex;
-    padding: 10px;
-    margin: 70px 5px;
-}
-
-#container .first-element > .second-line,
-#container .second-element > .second-line {
-    display: flex;
-}
-
-#container .first-element button {
+#container .first-element button,
+#container .second-element button,
+#container .third-element button,
+#container .fourth-element button{
+    display: inline-block;
     border: 2px solid #FFFFFF;
     padding: 10px 26px;
     background: none;
@@ -180,10 +184,13 @@ ul {
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease-in;
-    margin: 0 30px;
+    margin: 0 30px ;
 }
 
-#container .first-element button:hover {
+#container .first-element button:hover,
+#container .second-element button:hover,
+#container .third-element button:hover,
+#container .fourth-element button:hover{
     color: var(--button-hover-text);
     background-color: var(--button-hover-background);
     font-weight: 800;
@@ -206,11 +213,12 @@ ul {
 }
 
 #container img {
-    width: 400px;
-    height: 400px;
+    width: 370px;
+    height: 370px;
     filter: drop-shadow(10px 10px 10px #000000);
     border-radius: 30%;
     margin: 0 auto;
+
 }
 
 .buttons button {
@@ -223,7 +231,7 @@ ul {
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease-in;
-    margin: 50px 30px;
+
 }
 
 
@@ -237,7 +245,10 @@ ul {
 footer {
     width: 100%;
     height: 50vh;
-    background-color: #f1f1f1;
+    color: white;
+    border-top: 1px solid #9a9a9a;
+    border-radius: 10px 10px 0 0;
+    background-color: #1b1b1b;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -307,6 +318,7 @@ footer {
     border: none;
     background: none;
     cursor: pointer;
+
 }
 
 .choices > div {
@@ -317,17 +329,20 @@ footer {
 
 
 }
+
 @keyframes hideChatIcon {
     0% {
         transform: translateX(0);
     }
     100% {
         transform: translateX(500px);
+        display: none;
     }
 }
 
 @keyframes showChatIcon {
     0% {
+        display: inline-block;
         transform: translateX(500px);
     }
 
@@ -342,6 +357,7 @@ footer {
 
 @keyframes showChatBox {
     0% {
+        display: flex;
         transform: translateX(500px);
     }
 
@@ -357,6 +373,7 @@ footer {
 
     100% {
         transform: translateX(500px);
+        display: none;
     }
 }
 
@@ -368,15 +385,14 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     margin: 10px 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0,0.1), 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.2);
     right: 20px;
     bottom: 15px;
-    background: linear-gradient(145deg, #87CEEB, #4682B4);
+    background: #093159;
     border-right: 20px;
     border-radius: 20px;
     transform: translateX(500px);
 }
-
 
 
 #owner-information {
@@ -384,9 +400,8 @@ footer {
     padding: 0 10px;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid grey;
     border-radius: 10px;
-    background-color: var(--button-hover-background);
+    background: #031C36;
 }
 
 #owner-information img {
@@ -406,22 +421,25 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--primary-background);
+    background: none;
     color: white;
     font-size: 1.2rem;
     font-weight: 800;
-    border-radius: 50%;
-    transition: all 0.3s ease-in-out;
+
+    transition: all 0.6s ease-in-out;
     cursor: pointer;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
 
 }
 
 #cross:hover {
-    background-color: #855858;
+    background-color: #8e8787;
 }
 
 #owner-information p {
     font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+    color: #ffefef;
     font-size: 1.2rem;
 }
 
@@ -429,25 +447,25 @@ footer {
     align-self: flex-end;
     text-align: right;
     font-size: 0.9rem;
-    font-weight: 700;
-    background: linear-gradient(145deg, #C0C0C0, #A9A9A9);
-    color: #333;
+    font-weight: 800;
+    background: #031C36;
+    color: #FFFFFF;
     font-style: italic;
     display: inline-block;
     padding: 5px 10px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
     word-break: break-word;
-    max-width: 220px;
+    max-width: 280px;
 
 }
 
 #users-chat {
-    max-width: 220px;
+    max-width: 280px;
     font-size: 0.9rem;
     font-weight: 600;
 
-    background: #00d2ff;
+    background-color: #D9D9D9;
     color: #333;
     font-style: italic;
     display: inline-block;
@@ -460,11 +478,14 @@ footer {
 
 #write-chat textarea {
     width: 80%;
+    line-height: 30px;
+    height: 30px;
     border: none;
     margin-right: 100px;
     font-size: 0.9rem;
     resize: none;
     overflow: hidden;
+    background: #D9D9D9;
 
 }
 
@@ -478,11 +499,12 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 7px;
-    background-color: white;
+    background: #D9D9D9;
+
     border-radius: 0 0 10px 10px;
 }
 
-#write-chat button  {
+#write-chat button {
     width: 20%;
     border: none;
     background: none;
@@ -497,7 +519,7 @@ footer {
 
 #chats {
     display: flex;
-    gap: 10px;
+    gap: 1px;
     flex-direction: column;
     padding: 0 15px;
 
