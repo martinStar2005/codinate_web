@@ -1,6 +1,3 @@
-
-const words = ["CREATE", "IMPROVE", "DEVELOP", "ELEVATE"];
-let index = 0;
 const textElement = document.getElementById("text-change");
 const languageButton = document.querySelector(".choices")
 const navigation = document.querySelector("nav")
@@ -10,6 +7,9 @@ const iconChat = footer.querySelector("i")
 const cross = document.getElementById("cross")
 const chatBox = document.getElementById("chat-box")
 const chatContainer = document.querySelector('#chats');
+
+const words = ["CREATE", "IMPROVE", "DEVELOP", "ELEVATE"];
+let index = 0;
 
 function scrollToBottom() {
     chatContainer.scrollTop = chatContainer.scrollHeight;
@@ -65,30 +65,4 @@ const textarea = document.querySelector("textarea");
             }
         });
 
-const type = (word) => {
-    textElement.style.width = "0"
-    textElement.innerText = ""
-    let letterIndex = 0
-
-    const interval = setInterval(() => {
-        textElement.innerText += word[letterIndex]
-        letterIndex ++
-
-        if (letterIndex === word.length){
-            clearInterval(interval)
-            setTimeout(() => {
-                textElement.style.animation = "fade-out 0.5s forwards"
-                setTimeout(() => {
-                    textElement.style.animation = "none"
-                    textElement.innerText= ""
-                    index = (index + 1) % words.length
-                    type(words[index])
-
-                }, 300)
-            }, 2000)
-        }
-
-    }, 70)
-}
 scrollToBottom()
-type(words[index])
